@@ -1,0 +1,290 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+p {
+  font-family: "Hind Madurai", sans-serif;
+  margin-right: 6%;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  margin-left: 4.5%;
+  font-family: "Nunito Sans", sans-serif;
+}
+.cabecalho {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  font-size: 2rem;
+}
+.cabecalho div {
+  font-size: 2rem;
+  color: #100f3a;
+  font-weight: 400;
+}
+.navegacao {
+  display: flex;
+  list-style: none;
+  gap: 1vw;
+}
+.navegacao a {
+  text-decoration: none;
+}
+.navegacao a:visited {
+  color: #f5f5f5;
+}
+.navegacao li:hover {
+  background: #8583e1;
+}
+.navegacao li {
+  border-radius: 3px;
+  padding: 12px;
+  background: #100f3a;
+  color: #fff;
+}
+/* FINAL DO HEADER */
+
+/* CONTEUDO PRINCIPAL */
+.container {
+  margin: 10vh auto;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(4, auto-fit);
+  justify-items: center;
+  font-size: 1.8rem;
+  background-color: #f5f5f5;
+  text-align: justify;
+  column-gap: 1.5vw;
+  padding: 15px;
+  grid-template-areas:
+    "c1 c3"
+    "c2 c3"
+    "footer footer";
+}
+
+/* seção tres */
+.informacao-geral {
+  background: #100f3a;
+  color: #fff;
+  font-weight: 300;
+}
+.informacao-geral ul {
+  list-style: none;
+  border-radius: 2px;
+  padding: 20px;
+}
+.container .icons {
+  margin: 2% 0;
+}
+
+.svg-nav img {
+  width: 3vw;
+  height: auto;
+  margin-right: 2vw;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 2%;
+}
+h2 {
+  font-family: "Signika Negative", sans-serif;
+}
+h4{
+  font-size: 1.8rem;
+}
+.informacao-geral h2 {
+  text-align: center;
+}
+.li-autor {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem;
+}
+span {
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 1.5rem;
+  /* padding-left: 15px; */
+}
+.um img {
+  grid-area: c1;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.link-ex{
+  text-decoration: none;
+  font-weight: bold;
+  color: #100f3a;
+}
+.link-ex:visited{
+  color: #100f3a;
+
+}
+.dois {
+  grid-area: c2;
+}
+
+.tres {
+  grid-area: c3;
+}
+.texto-conteudo {
+  margin-top: 20px;
+  padding: px;
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 2.2rem;
+  line-height: 2;
+}
+/* FINAL CONTEUDO PRINCIPAL */
+
+/* Footer */
+footer {
+  color: rgb(165, 165, 165);
+  font-weight: 400;
+  font-style: italic;
+  grid-area: footer;
+  width: 100%;
+  background-color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* final footer */
+
+/* MEDIA QUERY */
+@media (min-width: 1024px){
+  .texto-conteudo ol li{
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .cabecalho {
+    gap: 3vw;
+    font-size: 1rem;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .svg-nav img {
+    width: 6vw;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .texto-conteudo ol li{
+    font-size: 1.5rem;
+  }
+  .um img {
+    width: 40vw;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .tres p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 789px) {
+  .cabecalho div {
+    height: 20%;
+  }
+  .navegacao {
+    font-size: 0.9rem;
+    padding: 3px;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  .tres h1 {
+    font-size: 2.5rem;
+  }
+  p .li-autor {
+    font-size: 0.8rem;
+  }
+  .li-autor span {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 745px) {
+  .navegacao li {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+  
+}
+@media (max-width: 431px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cabecalho {
+    font-size: 1.2rem;
+  }
+  .navegacao {
+    display: grid;
+    grid-template-areas:
+      "a1 a2"
+      "a3 a4";
+  }
+  .container {
+    margin-top: 15vh;
+  }
+}
+
+@media (min-width: 220px) and (max-width: 709px) {
+  .container {
+    column-gap: 5px;
+    text-align: center;
+    grid-template-areas:
+      "a0"
+      "a1 "
+      "a2 "
+      "a3 "
+      "a4 ";
+  }
+  h4{
+    font-size: 1rem;
+  }
+  .division {
+    font-size: 1.2rem;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .svg-nav img {
+    width: 9vw;
+  }
+  .cabecalho {
+    grid-area: a0;
+  }
+  .texto-conteudo ol li{
+    font-size: 1.1rem;
+  }
+  .um {
+    grid-area: a1;
+  }
+  .dois {
+    grid-area: a2;
+  }
+  .tres {
+    grid-area: a3;
+  }
+  .rodape {
+    grid-area: a4;
+  }
+  .cabecalho {
+    margin-bottom: 20vh;
+  }
+  footer{
+    font-size: 0.8rem;
+  };
+  
+}
